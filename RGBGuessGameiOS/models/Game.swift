@@ -14,6 +14,12 @@ struct Game {
     var scoreRound = 0
     var scoreTotal = 0
 
+    mutating func startNewGame() {
+        round = 0
+        scoreTotal = 0
+        startNewRound()
+    }
+
     mutating func startNewRound() {
         round += 1
         scoreRound = 0
