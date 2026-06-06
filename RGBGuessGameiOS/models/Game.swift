@@ -26,4 +26,17 @@ struct Game {
         targetRgb = Rgb.createRandomRgb()
         userRgb = Rgb()
     }
+
+    mutating func checkResult() {
+        let difference = lround(userRgb.difference(target: targetRgb) * 100.0)
+
+        scoreRound = 100 - difference
+        if difference == 0 {
+            scoreRound += 100
+        } else if difference == 1 {
+            scoreRound += 50
+        }
+
+        scoreTotal += scoreRound
+    }
 }
