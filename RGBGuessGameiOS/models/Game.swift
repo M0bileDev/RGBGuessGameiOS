@@ -8,9 +8,16 @@
 import Foundation
 
 struct Game {
-    let userRgb = Rgb()
+    var userRgb = Rgb()
     var targetRgb = Rgb.createRandomRgb()
     var round = 1
     var scoreRound = 0
     var scoreTotal = 0
+
+    mutating func startNewRound() {
+        round += 1
+        scoreRound = 0
+        targetRgb = Rgb.createRandomRgb()
+        userRgb = Rgb()
+    }
 }
