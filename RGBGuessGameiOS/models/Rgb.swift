@@ -20,4 +20,15 @@ struct Rgb {
         return Rgb(red: red, green: green, blue: blue)
     }
 
+    // Function measures how different two colors are, basically the distance between them in RGB (3d) space
+    func difference(target: Rgb) -> Double {
+        let sum =
+            squared(red - target.red)
+            + squared(green - target.green)
+            + squared(blue - target.blue)
+
+        return sqrt(sum / 3.0)
+    }
+
+    func squared(_ x: Double) -> Double { x * x }
 }
