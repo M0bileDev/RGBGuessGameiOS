@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var game = Game()
+    @State var guess = Rgb()
+
     var body: some View {
         VStack {
             Color(red: 0.5, green: 0.5, blue: 0.5)
@@ -18,7 +21,7 @@ struct ContentView: View {
                 .padding()
             Slider(value: .constant(0.5))
             Button("Hit me!") {
-                //todo: add checkaction logic
+                //todo: add check action logic
             }
         }
 
@@ -26,5 +29,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView(guess: Rgb())
 }
