@@ -31,6 +31,7 @@ struct ContentView: View {
             ColorSliderView(value: $guess.green, trackColor: .green)
             ColorSliderView(value: $guess.blue, trackColor: .blue)
             Button("Hit me!") {
+                game.userRgb = guess
                 displayAlert = true
                 game.checkResult()
             }
