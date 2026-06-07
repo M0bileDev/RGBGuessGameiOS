@@ -8,9 +8,9 @@
 import Foundation
 
 struct Rgb {
-    var red = 0.0
-    var green = 0.0
-    var blue = 0.0
+    var red = 0.5
+    var green = 0.5
+    var blue = 0.5
 
     static func createRandomRgb() -> Rgb {
         let red = Double.random(in: 0..<1)
