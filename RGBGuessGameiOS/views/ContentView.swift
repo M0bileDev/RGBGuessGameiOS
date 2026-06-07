@@ -15,8 +15,13 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Color(rgbStruct: game.targetRgb)
-            Text("R: ??? G: ??? B: ???")
-                .padding()
+            if !displayAlert {
+                Text("R: ??? G: ??? B: ???")
+                    .padding()
+            } else {
+                Text("\(game.targetRgb.description)")
+                    .padding()
+            }
             Color(rgbStruct: guess)
             Text("\(guess.description)")
                 .padding()
