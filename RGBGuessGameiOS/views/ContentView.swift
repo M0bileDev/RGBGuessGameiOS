@@ -19,8 +19,9 @@ struct ContentView: View {
             Color(rgbStruct: guess)
             Text("\(guess.description)")
                 .padding()
-            
-            .padding(.horizontal)
+            ColorSliderView(value: $guess.red, trackColor: .red)
+            ColorSliderView(value: $guess.green, trackColor: .green)
+            ColorSliderView(value: $guess.blue, trackColor: .blue)
             Button("Hit me!") {
                 //todo: add check action logic
             }
