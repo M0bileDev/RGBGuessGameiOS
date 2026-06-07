@@ -18,6 +18,7 @@ struct ColorSliderView: View {
                 .accentColor(trackColor)
             Text("255")
         }
+        .padding(.horizontal)
     }
 }
 
