@@ -14,7 +14,8 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            Color(rgbStruct: game.targetRgb)
+            Circle()
+                .fill(Color(rgbStruct: game.targetRgb))
             if !displayAlert {
                 Text("R: ??? G: ??? B: ???")
                     .padding()
@@ -22,7 +23,8 @@ struct ContentView: View {
                 Text("\(game.targetRgb.description)")
                     .padding()
             }
-            Color(rgbStruct: guess)
+            Circle()
+                .fill(Color(rgbStruct: guess))
             Text("\(guess.description)")
                 .padding()
             ColorSliderView(value: $guess.red, trackColor: .red)
