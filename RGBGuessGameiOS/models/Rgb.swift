@@ -36,6 +36,6 @@ struct Rgb {
 extension Rgb: CustomStringConvertible {
     // Rescales from the fraction system to the byte system
     var description: String {
-        "Rgb(red: \(red * 255.0), green: \(green * 255.0), blue: \(blue * 255.0))"
+        "R: \(Int(red * 255.0)), G: \(Int(green * 255.0)), B: \(Int(blue * 255.0))"
     }
 }
