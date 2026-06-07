@@ -19,12 +19,7 @@ struct ContentView: View {
             Color(rgbStruct: guess)
             Text("\(guess.description)")
                 .padding()
-            HStack {
-                Text("0")
-                Slider(value: $guess.red)
-                    .accentColor(.red)
-                Text("255")
-            }
+            
             .padding(.horizontal)
             Button("Hit me!") {
                 //todo: add check action logic
