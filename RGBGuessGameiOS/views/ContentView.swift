@@ -16,6 +16,9 @@ struct ContentView: View {
             Color(red: 0.0, green: 0.0, blue: 0.0)
             Text("R: ??? G: ??? B: ???")
                 .padding()
+            Button("Hit me!") {
+                //todo: add checkaction logic
+            }
         }
 
     }
